@@ -20,6 +20,9 @@ app.UseRouting();
 
 app.UseAuthorization();
 
+// ヘルスチェックエンドポイントの追加
+app.Map("/health", () => Results.Ok("Healthy"));
+
 app.MapRazorPages();
 
 app.Run();
